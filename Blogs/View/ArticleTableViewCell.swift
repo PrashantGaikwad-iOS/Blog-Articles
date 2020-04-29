@@ -26,15 +26,12 @@ class ArticleTableViewCell: UITableViewCell {
         didSet {
             self.nameLabel.text = articleViewModel.name
             self.designationLabel.text = articleViewModel.designation
-
             self.timeLabel.text = articleViewModel.time
-
             self.articleDescriptionLabel.text = articleViewModel.articleDescription
             self.articleTitleLabel.text = articleViewModel.articleTitle
             self.articleUrlLabel.text = articleViewModel.articleUrl
             self.likesCountLabel.text = String(describing: articleViewModel.likesCount)
             self.commentsCountLabel.text = String(describing: articleViewModel.commentsCount)
-
             if let url = URL(string: articleViewModel.avatarImage) {
                 UIImage.loadFrom(url: url) { image in
                     self.avatarImageView.image = image
@@ -42,27 +39,13 @@ class ArticleTableViewCell: UITableViewCell {
             }else{
                 self.avatarImageView.image = UIImage(named: "avatar")
             }
-
             if let url = URL(string: articleViewModel.articleImage) {
                 UIImage.loadFrom(url: url) { image in
                     self.articleImageView.image = image
                 }
             }else{
-                self.articleImageView.image = UIImage(named: "article")
+                self.articleImageView.image = nil
             }
-
         }
     }
-
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
-    }
-    
 }
