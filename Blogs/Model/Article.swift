@@ -27,4 +27,5 @@ struct MediaModel: Decodable {
 struct UserModel: Decodable {
     let name: String?
     let designation: String?
+    let avatar: String?
 }

@@ -14,7 +14,7 @@ class Service: NSObject {
 
     //https://5e99a9b1bc561b0016af3540.mockapi.io/jet2/api/v1/blogs?page=1&limit=10
 
-    func fetchArticles(pageNumKey:String,completion: @escaping ([Article]?, Error?) -> ()) {
+    func fetchArticles(pageNumKey:String,completion: @escaping ([ArticleModel]?, Error?) -> ()) {
         let urlString = "https://5e99a9b1bc561b0016af3540.mockapi.io/jet2/api/v1/blogs?page=\(pageNumKey)&limit=10"
         guard let url = URL(string: urlString) else { return }
         URLSession.shared.dataTask(with: url) { (data, resp, err) in
@@ -26,7 +26,7 @@ class Service: NSObject {
 
             guard let data = data else { return }
             do {
-                let result = try JSONDecoder().decode([Article].self, from: data)
+                let result = try JSONDecoder().decode([ArticleModel].self, from: data)
                 DispatchQueue.main.async {
                     completion(result, nil)
                 }

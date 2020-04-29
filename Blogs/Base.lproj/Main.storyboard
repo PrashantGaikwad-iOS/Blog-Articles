@@ -10,17 +10,36 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Articles-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Blogs" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ArticlesVC" id="BYZ-38-t0r" customClass="ArticlesVC" customModule="Blogs" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="sP4-qP-WqK">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="uIC-AG-rfo"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="xdD-mw-Sc7"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="sP4-qP-WqK" secondAttribute="trailing" id="Cyi-MI-OdS"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="sP4-qP-WqK" secondAttribute="bottom" id="PHo-Iu-hiK"/>
+                            <constraint firstItem="sP4-qP-WqK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="lox-JC-sNM"/>
+                            <constraint firstItem="sP4-qP-WqK" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="rqc-5t-d2y"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
-                    <navigationItem key="navigationItem" id="oBT-Kt-fbB"/>
+                    <navigationItem key="navigationItem" title="Articles" largeTitleDisplayMode="always" id="oBT-Kt-fbB"/>
+                    <connections>
+                        <outlet property="articlesTableView" destination="sP4-qP-WqK" id="Hrx-Hn-TBP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
