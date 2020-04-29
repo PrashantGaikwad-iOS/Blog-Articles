@@ -30,8 +30,10 @@ class ArticleTableViewCell: UITableViewCell {
             self.articleDescriptionLabel.text = articleViewModel.articleDescription
             self.articleTitleLabel.text = articleViewModel.articleTitle
             self.articleUrlLabel.text = articleViewModel.articleUrl
-            self.likesCountLabel.text = String(describing: articleViewModel.likesCount)
-            self.commentsCountLabel.text = String(describing: articleViewModel.commentsCount)
+
+            self.likesCountLabel.text = String(describing: Utils.suffixNumber(number:articleViewModel?.likesCount as NSNumber? ?? 0)) + " Likes"
+            self.commentsCountLabel.text = String(describing: Utils.suffixNumber(number:articleViewModel?.commentsCount as NSNumber? ?? 0)) + " Comments"
+
             if let url = URL(string: articleViewModel.avatarImage) {
                 UIImage.loadFrom(url: url) { image in
                     self.avatarImageView.image = image
