@@ -45,7 +45,7 @@ class ArticlesVC: UIViewController {
                 self.articlesViewModel = self.articlesViewModel + articles
                 self.articlesTableView.reloadData()
             }else{
-                print("no more data")
+                //print("no more data")
             }
         }
     }
@@ -72,7 +72,6 @@ extension ArticlesVC: UITableViewDataSource, UITableViewDelegate{
 
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
         if indexPath.row == articlesViewModel.count - 1 {
-            print("You are at last cell - \(pageNumber)")
             pageNumber += 1
             fetchData()
         }

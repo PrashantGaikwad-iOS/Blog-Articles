@@ -26,7 +26,7 @@ class ArticleTableViewCell: UITableViewCell {
         didSet {
             self.nameLabel.text = articleViewModel.name
             self.designationLabel.text = articleViewModel.designation
-            self.timeLabel.text = articleViewModel.time
+            self.timeLabel.text = Date.timeAgoDisplay(dateStr: articleViewModel.time)
             self.articleDescriptionLabel.text = articleViewModel.articleDescription
             self.articleTitleLabel.text = articleViewModel.articleTitle
             self.articleUrlLabel.text = articleViewModel.articleUrl
