@@ -21,9 +21,38 @@ class ArticleTableViewCell: UITableViewCell {
     @IBOutlet weak var articleUrlLabel: UILabel!
     @IBOutlet weak var likesCountLabel: UILabel!
     @IBOutlet weak var commentsCountLabel: UILabel!
-    @IBOutlet weak var imageHeightConstraint: NSLayoutConstraint!
-    
 
+    var articleViewModel: ArticleViewModel! {
+        didSet {
+            self.nameLabel.text = articleViewModel.name
+            self.designationLabel.text = articleViewModel.designation
+
+            self.timeLabel.text = articleViewModel.time
+
+            self.articleDescriptionLabel.text = articleViewModel.articleDescription
+            self.articleTitleLabel.text = articleViewModel.articleTitle
+            self.articleUrlLabel.text = articleViewModel.articleUrl
+            self.likesCountLabel.text = String(describing: articleViewModel.likesCount)
+            self.commentsCountLabel.text = String(describing: articleViewModel.commentsCount)
+
+            if let url = URL(string: articleViewModel.avatarImage) {
+                UIImage.loadFrom(url: url) { image in
+                    self.avatarImageView.image = image
+                }
+            }else{
+                self.avatarImageView.image = UIImage(named: "avatar")
+            }
+
+            if let url = URL(string: articleViewModel.articleImage) {
+                UIImage.loadFrom(url: url) { image in
+                    self.articleImageView.image = image
+                }
+            }else{
+                self.articleImageView.image = UIImage(named: "article")
+            }
+
+        }
+    }
 
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -13,10 +13,11 @@
 		C01B0163245997F4003B6AE0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01B0161245997F4003B6AE0 /* LaunchScreen.storyboard */; };
 		C01B017124599A0E003B6AE0 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B017024599A0E003B6AE0 /* Utils.swift */; };
 		C01B017324599BBE003B6AE0 /* Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B017224599BBE003B6AE0 /* Service.swift */; };
-		C01B017524599C7B003B6AE0 /* Article.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B017424599C7B003B6AE0 /* Article.swift */; };
+		C01B017524599C7B003B6AE0 /* ArticleModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B017424599C7B003B6AE0 /* ArticleModel.swift */; };
 		C01B01772459A0EF003B6AE0 /* ArticlesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B01762459A0EF003B6AE0 /* ArticlesVC.swift */; };
 		C01B017C2459A366003B6AE0 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B017A2459A366003B6AE0 /* ArticleTableViewCell.swift */; };
 		C01B017D2459A366003B6AE0 /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C01B017B2459A366003B6AE0 /* ArticleTableViewCell.xib */; };
+		C04160842459C8D500280F22 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04160832459C8D500280F22 /* ArticleViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,10 +29,11 @@
 		C01B0164245997F4003B6AE0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C01B017024599A0E003B6AE0 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		C01B017224599BBE003B6AE0 /* Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Service.swift; sourceTree = "<group>"; };
-		C01B017424599C7B003B6AE0 /* Article.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Article.swift; sourceTree = "<group>"; };
+		C01B017424599C7B003B6AE0 /* ArticleModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleModel.swift; sourceTree = "<group>"; };
 		C01B01762459A0EF003B6AE0 /* ArticlesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesVC.swift; sourceTree = "<group>"; };
 		C01B017A2459A366003B6AE0 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		C01B017B2459A366003B6AE0 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
+		C04160832459C8D500280F22 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 		C01B016D24599922003B6AE0 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				C04160832459C8D500280F22 /* ArticleViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -122,7 +125,7 @@
 		C01B016F24599936003B6AE0 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C01B017424599C7B003B6AE0 /* Article.swift */,
+				C01B017424599C7B003B6AE0 /* ArticleModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -199,11 +202,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C01B017524599C7B003B6AE0 /* Article.swift in Sources */,
+				C01B017524599C7B003B6AE0 /* ArticleModel.swift in Sources */,
 				C01B0159245997F1003B6AE0 /* AppDelegate.swift in Sources */,
 				C01B017124599A0E003B6AE0 /* Utils.swift in Sources */,
 				C01B01772459A0EF003B6AE0 /* ArticlesVC.swift in Sources */,
 				C01B017C2459A366003B6AE0 /* ArticleTableViewCell.swift in Sources */,
+				C04160842459C8D500280F22 /* ArticleViewModel.swift in Sources */,
 				C01B017324599BBE003B6AE0 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
