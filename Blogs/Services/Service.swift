@@ -11,9 +11,6 @@ import Foundation
 // Service to fetch Server data
 class Service: NSObject {
     static let shared = Service()
-
-    //https://5e99a9b1bc561b0016af3540.mockapi.io/jet2/api/v1/blogs?page=1&limit=10
-
     func fetchArticles(pageNumKey:Int,completion: @escaping ([ArticleModel]?, Error?) -> ()) {
         let urlString = "https://5e99a9b1bc561b0016af3540.mockapi.io/jet2/api/v1/blogs?page=\(pageNumKey)&limit=10"
         guard let url = URL(string: urlString) else { return }
@@ -23,7 +20,6 @@ class Service: NSObject {
                 print("Failed to fetch result:", err)
                 return
             }
-
             guard let data = data else { return }
             do {
                 let result = try JSONDecoder().decode([ArticleModel].self, from: data)
@@ -36,3 +32,4 @@ class Service: NSObject {
             }.resume()
     }
 }
+

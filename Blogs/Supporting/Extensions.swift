@@ -14,6 +14,7 @@ extension UIImage {
         DispatchQueue.global().async {
             if let data = try? Data(contentsOf: url) {
                 DispatchQueue.main.async {
+                    imageCache.setObject(UIImage(data: data)!, forKey: url as AnyObject)
                     completion(UIImage(data: data))
                 }
             } else {
@@ -57,5 +58,12 @@ extension Date {
         }
 
         return "\(secondsAgo / year) year"
+    }
+}
+
+//MARK: - Encode
+extension Encodable {
+    func data(using encoder: JSONEncoder = JSONEncoder()) throws -> Data {
+        return try encoder.encode(self)
     }
 }

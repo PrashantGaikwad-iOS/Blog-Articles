@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C013EADA245C68B40004D53D /* OfflineManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013EAD9245C68B40004D53D /* OfflineManager.swift */; };
+		C013EADC245C699C0004D53D /* Rechability.swift in Sources */ = {isa = PBXBuildFile; fileRef = C013EADB245C699C0004D53D /* Rechability.swift */; };
 		C01B0159245997F1003B6AE0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B0158245997F1003B6AE0 /* AppDelegate.swift */; };
 		C01B015E245997F1003B6AE0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C01B015C245997F1003B6AE0 /* Main.storyboard */; };
 		C01B0160245997F4003B6AE0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C01B015F245997F4003B6AE0 /* Assets.xcassets */; };
@@ -17,11 +19,14 @@
 		C01B01772459A0EF003B6AE0 /* ArticlesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B01762459A0EF003B6AE0 /* ArticlesVC.swift */; };
 		C01B017C2459A366003B6AE0 /* ArticleTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C01B017A2459A366003B6AE0 /* ArticleTableViewCell.swift */; };
 		C01B017D2459A366003B6AE0 /* ArticleTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C01B017B2459A366003B6AE0 /* ArticleTableViewCell.xib */; };
+		C0327EFB245C1CD0008C3E20 /* Blog.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = C0327EF9245C1CD0008C3E20 /* Blog.xcdatamodeld */; };
 		C04160842459C8D500280F22 /* ArticleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04160832459C8D500280F22 /* ArticleViewModel.swift */; };
 		C04160862459FA8A00280F22 /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04160852459FA8A00280F22 /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C013EAD9245C68B40004D53D /* OfflineManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OfflineManager.swift; sourceTree = "<group>"; };
+		C013EADB245C699C0004D53D /* Rechability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rechability.swift; sourceTree = "<group>"; };
 		C01B0155245997F1003B6AE0 /* Blogs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Blogs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C01B0158245997F1003B6AE0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C01B015D245997F1003B6AE0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -34,6 +39,7 @@
 		C01B01762459A0EF003B6AE0 /* ArticlesVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticlesVC.swift; sourceTree = "<group>"; };
 		C01B017A2459A366003B6AE0 /* ArticleTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleTableViewCell.swift; sourceTree = "<group>"; };
 		C01B017B2459A366003B6AE0 /* ArticleTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ArticleTableViewCell.xib; sourceTree = "<group>"; };
+		C0327EFA245C1CD0008C3E20 /* Blog.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Blog.xcdatamodel; sourceTree = "<group>"; };
 		C04160832459C8D500280F22 /* ArticleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArticleViewModel.swift; sourceTree = "<group>"; };
 		C04160852459FA8A00280F22 /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -68,12 +74,13 @@
 		C01B0157245997F1003B6AE0 /* Blogs */ = {
 			isa = PBXGroup;
 			children = (
+				C0327EFC245C1CD8008C3E20 /* Coredata  */,
 				C01B016F24599936003B6AE0 /* Model */,
 				C01B016E2459992F003B6AE0 /* View */,
 				C01B016D24599922003B6AE0 /* ViewModel */,
 				C01B016C24599917003B6AE0 /* Controller */,
 				C01B016B2459990E003B6AE0 /* Services */,
-				C01B016A24599902003B6AE0 /* Utils */,
+				C01B016A24599902003B6AE0 /* Supporting */,
 				C01B0158245997F1003B6AE0 /* AppDelegate.swift */,
 				C01B015C245997F1003B6AE0 /* Main.storyboard */,
 				C01B015F245997F4003B6AE0 /* Assets.xcassets */,
@@ -83,13 +90,15 @@
 			path = Blogs;
 			sourceTree = "<group>";
 		};
-		C01B016A24599902003B6AE0 /* Utils */ = {
+		C01B016A24599902003B6AE0 /* Supporting */ = {
 			isa = PBXGroup;
 			children = (
 				C01B017024599A0E003B6AE0 /* Utils.swift */,
 				C04160852459FA8A00280F22 /* Extensions.swift */,
+				C013EAD9245C68B40004D53D /* OfflineManager.swift */,
+				C013EADB245C699C0004D53D /* Rechability.swift */,
 			);
-			path = Utils;
+			path = Supporting;
 			sourceTree = "<group>";
 		};
 		C01B016B2459990E003B6AE0 /* Services */ = {
@@ -131,6 +140,14 @@
 				C01B017424599C7B003B6AE0 /* ArticleModel.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		C0327EFC245C1CD8008C3E20 /* Coredata  */ = {
+			isa = PBXGroup;
+			children = (
+				C0327EF9245C1CD0008C3E20 /* Blog.xcdatamodeld */,
+			);
+			path = "Coredata ";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,8 +227,11 @@
 				C01B017124599A0E003B6AE0 /* Utils.swift in Sources */,
 				C04160862459FA8A00280F22 /* Extensions.swift in Sources */,
 				C01B01772459A0EF003B6AE0 /* ArticlesVC.swift in Sources */,
+				C013EADC245C699C0004D53D /* Rechability.swift in Sources */,
+				C013EADA245C68B40004D53D /* OfflineManager.swift in Sources */,
 				C01B017C2459A366003B6AE0 /* ArticleTableViewCell.swift in Sources */,
 				C04160842459C8D500280F22 /* ArticleViewModel.swift in Sources */,
+				C0327EFB245C1CD0008C3E20 /* Blog.xcdatamodeld in Sources */,
 				C01B017324599BBE003B6AE0 /* Service.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -414,6 +434,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		C0327EF9245C1CD0008C3E20 /* Blog.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				C0327EFA245C1CD0008C3E20 /* Blog.xcdatamodel */,
+			);
+			currentVersion = C0327EFA245C1CD0008C3E20 /* Blog.xcdatamodel */;
+			path = Blog.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = C01B014D245997F1003B6AE0 /* Project object */;
 }

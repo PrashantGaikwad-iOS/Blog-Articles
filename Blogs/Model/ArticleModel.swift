@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct ArticleModel: Decodable {
+struct ArticleModel: Codable { // typealias Codable = Decodable & Encodable
     let id: String?
     let comments: Int?
     let likes: Int?
@@ -18,13 +18,13 @@ struct ArticleModel: Decodable {
     let user: [UserModel]?
 }
 
-struct MediaModel: Decodable {
+struct MediaModel: Codable {
     let image: String?
     let title: String?
     let url: String?
 }
 
-struct UserModel: Decodable {
+struct UserModel: Codable {
     let name: String?
     let designation: String?
     let avatar: String?
