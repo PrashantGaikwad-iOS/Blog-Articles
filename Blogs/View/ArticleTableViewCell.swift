@@ -34,10 +34,7 @@ class ArticleTableViewCell: UITableViewCell {
             self.timeLabel.text = Date.timeAgoDisplay(dateStr: articleViewModel.time)
             self.articleDescriptionLabel.text = articleViewModel.articleDescription
             self.articleTitleLabel.text = articleViewModel.articleTitle
-            if articleViewModel.articleUrl != "" {
-                let attributedString = NSMutableAttributedString(string: articleViewModel.articleUrl, attributes:[NSAttributedString.Key.link: URL(string: articleViewModel.articleUrl)!])
-                self.articleUrlLabel.attributedText = attributedString
-            }
+            self.articleUrlLabel.text = articleViewModel.articleUrl
             self.likesCountLabel.text = String(describing: Utils.suffixNumber(number:articleViewModel?.likesCount as NSNumber? ?? 0)) + " Likes"
             self.commentsCountLabel.text = String(describing: Utils.suffixNumber(number:articleViewModel?.commentsCount as NSNumber? ?? 0)) + " Comments"
 

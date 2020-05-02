@@ -29,6 +29,7 @@ class ArticlesVC: UIViewController {
     //MARK: - Custom Methods
     fileprivate func setupView() {
         navigationController?.navigationBar.prefersLargeTitles = true
+        navigationController?.navigationBar.barTintColor = UIColor(red:  59/255.0, green: 89/255.0, blue: 152/255.0, alpha: 255.0/100.0)
         articlesTableView.register(UINib.init(nibName: "ArticleTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
         articlesTableView.estimatedRowHeight = 460.0
         articlesTableView.rowHeight = UITableView.automaticDimension
