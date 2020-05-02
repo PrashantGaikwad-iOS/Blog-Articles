@@ -28,6 +28,7 @@ class ArticlesVC: UIViewController {
 
     //MARK: - Custom Methods
     fileprivate func setupView() {
+        navigationController?.navigationBar.prefersLargeTitles = true
         articlesTableView.register(UINib.init(nibName: "ArticleTableViewCell", bundle: nil), forCellReuseIdentifier: cellId)
         articlesTableView.estimatedRowHeight = 460.0
         articlesTableView.rowHeight = UITableView.automaticDimension
